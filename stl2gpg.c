@@ -91,7 +91,7 @@ void prompt(int state_count){
 	fflush(stdout);
 }
 
-char* cscale_def = 0;
+char* cscale_def = "1";
 
 struct poptOption opt_table[] = {
 	{ "cscale", 'c', POPT_ARG_STRING, &cscale_def, 'c', "cscale on the command line" },
