@@ -251,10 +251,10 @@ int main(int argc, const char** argv)
 			input_counts[state_count] = count;
 			input_states[state_count] = state;
 
-			if (state_count++ == 0){
+			if (state_count == 0){
 				state0 = state;			/* do nothing, but set state0 */
 			}else{
-				if (state_count++ == 1){
+				if (state_count == 1){
 					if (count < STARTUP){
 						fprintf(stderr, "STARTUP min count %d\n", STARTUP);
 						count = STARTUP;
@@ -267,6 +267,7 @@ int main(int argc, const char** argv)
 					delta_times? abs_count+count: count-1);
 				state0 = state;
 			}
+			state_count++;
 		}else{
 			fprintf(stderr, "scan failed\n");
 			return -1;
