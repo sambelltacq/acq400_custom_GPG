@@ -274,7 +274,7 @@ int main(int argc, const char** argv)
 		}
 	}
 
-        abs_count = expand_state(state0, delta_times? abs_count+count: count);
+        //abs_count = expand_state(state0, delta_times? abs_count+count: count);
 
 	if (state_count < 3){
 		fprintf(stderr, "state_count < 3 add entry\n");
